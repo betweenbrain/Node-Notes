@@ -6,7 +6,7 @@ console.time('timer');
 var fn1 = function (v) {
     return new Promise(function (resolve, reject) {
         console.log('fn1, iteration ' + v);
-        resolve();
+        resolve(v);
     });
 };
 
@@ -14,7 +14,7 @@ var fn2 = function (v) {
     return new Promise(function (resolve, reject) {
         setTimeout(function () {
             console.log('fn2, iteration ' + v);
-            resolve();
+            resolve(v);
         }, 1000)
     });
 };
@@ -22,7 +22,7 @@ var fn2 = function (v) {
 var fn3 = function (v) {
     return new Promise(function (resolve, reject) {
         console.log('fn3, iteration ' + v);
-        resolve();
+        resolve(v);
     });
 };
 
